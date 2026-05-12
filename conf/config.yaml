@@ -1,0 +1,53 @@
+mode: "dev"
+port: 8080
+
+log:
+  level: "debug"
+  filename: "./bluebell.log"
+  max_size: 1000
+  max_age: 3600
+  max_backups: 5
+
+auth:
+  jwt_expire: 8760 # token过期时间 一年
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  password: 123456
+  db: bluebell
+  max_open_conns: 100
+  max_idle_conns: 20
+
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  password: ""
+  db: 0
+  PoolSize: 100
+# redis:
+#   host: 127.0.0.1
+#   port: 16379
+#   db: 0
+
+#这两个得数据都是一样的，但是下面是viper时代，上面是结构体传值时代
+# name: "bluebell"
+# mode: "dev"
+# port: 8080
+
+# log:
+#   level: "debug"
+#   filename: "bluebell.log"
+#   max_size: 200
+#   max_age: 30
+#   max_backups: 7
+# mysql:
+#   host: 127.0.0.1
+#   port: 3306
+#   user: "root"
+#   password: "123456"
+#   dbname: "bluebell"
+#   max_open_connes: "20"
+#   max_idle_conns: "10"
+
